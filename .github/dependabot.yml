@@ -1,0 +1,23 @@
+# very meta. bot to update bot actions
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "🤖: "
+  - package-ecosystem: "cargo"
+    directory: "/dots-manager"
+    schedule:
+      interval: "weekly"
+      # UTC
+      time: "09:00"
+    labels:
+      - "defer to 🦀"
+      - "rust"
+      - "dependencies"
+    # Note, we don't use target branch here, because that will try to move all
+    # the template changes into main- which is NOT what we want.
+    commit-message:
+      prefix: "🤖 [REFERENCE]: "
