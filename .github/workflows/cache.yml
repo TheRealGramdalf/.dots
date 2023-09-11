@@ -15,7 +15,7 @@ jobs:
       user_matrix: ${{ steps.set-matrix.outputs.user_matrix }}
       config_matrix: ${{ steps.set-matrix.outputs.config_matrix }}
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         ref: main
     # 1) create a https://app.cachix.org account
@@ -52,7 +52,7 @@ jobs:
         users: ${{ fromJson(needs.list-users.outputs.user_matrix) }}
         configs: ${{ fromJson(needs.list-users.outputs.config_matrix) }}
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         ref: main
 

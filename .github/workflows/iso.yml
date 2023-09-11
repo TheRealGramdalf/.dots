@@ -9,7 +9,7 @@ jobs:
   build-wsl:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: "provision home-mananger for wsl"
       uses: ./.github/actions/runner
       id: runner
@@ -31,7 +31,7 @@ jobs:
   build-live:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: "provision home-mananger for iso"
       uses: ./.github/actions/runner
       id: runner
@@ -57,7 +57,7 @@ jobs:
       packages: write
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: "provision home-mananger for docker"
       uses: ./.github/actions/runner
       id: runner
